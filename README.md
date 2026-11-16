@@ -44,16 +44,25 @@ The core diffs two readings and divides by the elapsed time.
 
 ```bash
 # auto-detect (GNOME extension and/or DMS plugin)
-curl -fsSL https://raw.githubusercontent.com/abinashbir/netspeed/main/scripts/bootstrap.sh | bash
+curl -fsSL https://abinashbir.github.io/netspeed/install.sh | bash
 
 # pick one explicitly
-curl -fsSL https://raw.githubusercontent.com/abinashbir/netspeed/main/scripts/bootstrap.sh | bash -s -- gnome
-curl -fsSL https://raw.githubusercontent.com/abinashbir/netspeed/main/scripts/bootstrap.sh | bash -s -- dms
-curl -fsSL https://raw.githubusercontent.com/abinashbir/netspeed/main/scripts/bootstrap.sh | bash -s -- both
+curl -fsSL https://abinashbir.github.io/netspeed/install.sh | bash -s -- gnome
+curl -fsSL https://abinashbir.github.io/netspeed/install.sh | bash -s -- dms
+curl -fsSL https://abinashbir.github.io/netspeed/install.sh | bash -s -- both
 ```
 
 The bootstrapper downloads the project from GitHub into a temp directory,
 runs the install script(s) from there, and deletes the temp copy.
+
+<details>
+<summary>Longer URL (same thing, no GitHub Pages)</summary>
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/abinashbir/netspeed/main/scripts/bootstrap.sh | bash
+```
+
+</details>
 
 ### From a clone
 
