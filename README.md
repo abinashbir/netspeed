@@ -40,6 +40,29 @@ The core diffs two readings and divides by the elapsed time.
 
 ## Install
 
+### One-liner (recommended)
+
+```bash
+# auto-detect (GNOME extension and/or DMS plugin)
+curl -fsSL https://raw.githubusercontent.com/abinashbir/netspeed/main/scripts/bootstrap.sh | bash
+
+# pick one explicitly
+curl -fsSL https://raw.githubusercontent.com/abinashbir/netspeed/main/scripts/bootstrap.sh | bash -s -- gnome
+curl -fsSL https://raw.githubusercontent.com/abinashbir/netspeed/main/scripts/bootstrap.sh | bash -s -- dms
+curl -fsSL https://raw.githubusercontent.com/abinashbir/netspeed/main/scripts/bootstrap.sh | bash -s -- both
+```
+
+The bootstrapper downloads the project from GitHub into a temp directory,
+runs the install script(s) from there, and deletes the temp copy.
+
+### From a clone
+
+```bash
+git clone https://github.com/abinashbir/netspeed.git
+cd netspeed
+bash scripts/install-gnome.sh   # or scripts/install-dms.sh
+```
+
 ### GNOME Shell (works right now on your session)
 
 ```bash
@@ -97,6 +120,7 @@ speed_indicater/
 │   ├── Settings.qml
 │   └── core.js                       # installed copy of shared/core.js
 ├── scripts/
+│   ├── bootstrap.sh                   # one-shot: download + install (curl | bash)
 │   ├── install-gnome.sh
 │   └── install-dms.sh
 └── tests/
