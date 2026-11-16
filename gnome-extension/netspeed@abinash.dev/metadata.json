@@ -1,0 +1,9 @@
+{
+  "uuid": "netspeed@abinash.dev",
+  "name": "Network Speed Indicator",
+  "description": "Shows live download speed, upload speed and total data consumed in the top bar.",
+  "shell-version": ["51"],
+  "session-modes": ["user"],
+  "version": 1,
+  "url": "https://github.com/abinashbir/netspeed"
+}

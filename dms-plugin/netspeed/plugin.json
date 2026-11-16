@@ -1,0 +1,13 @@
+{
+  "id": "netspeed",
+  "name": "Network Speed",
+  "description": "Live download / upload speed and total data consumed, read from /proc/net/dev.",
+  "version": "1.0.0",
+  "author": "abinash",
+  "type": "widget",
+  "capabilities": ["dankbar-widget"],
+  "category": "monitoring",
+  "component": "./BandwidthWidget.qml",
+  "settings": "./Settings.qml",
+  "permissions": ["settings_read", "settings_write"]
+}
