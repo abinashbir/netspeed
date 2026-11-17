@@ -3,14 +3,14 @@
 A network speed indicator for Fedora that shows, live in the top bar:
 
 ```
-↓1.2M/s  ↑340K/s  ⇅4.7G
+↓1.2M/s  ↑340K/s  Σ4.7G
 ```
 
 | symbol | meaning |
 |---|---|
 | `↓` | current download speed |
 | `↑` | current upload speed |
-| `⇅` | total data consumed on that interface since boot |
+| `Σ` | total data consumed on that interface since boot |
 
 There are **two front-ends** that share **one core** (`shared/core.js`), so
 both show exactly the same numbers:

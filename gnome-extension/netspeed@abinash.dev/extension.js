@@ -1,6 +1,6 @@
 // Network Speed Indicator - GNOME Shell extension.
 //
-// Shows in the top bar:  ↓ download   ↑ upload   ⇅ total consumed
+// Shows in the top bar:  ↓ download   ↑ upload   Σ total consumed
 // Data comes from /proc/net/dev via the shared core (shared/core.js),
 // which is copied next to this file at install time.
 //
@@ -46,7 +46,7 @@ export default class NetworkSpeedIndicator extends Extension {
 
         this._indicator = new PanelMenu.Button(0.5, 'Network Speed', false);
         this._label = new St.Label({
-            text: '↓— ↑— ⇅—',
+            text: '↓— ↑— Σ—',
             y_align: Clutter.ActorAlign.CENTER,
         });
         this._label.add_style_class_name('netspeed-label');
@@ -208,7 +208,7 @@ export default class NetworkSpeedIndicator extends Extension {
 
         const iface = Core.pickInterface(this._stats, this._iface);
         if (!iface) {
-            this._label.set_text('↓— ↑— ⇅—');
+            this._label.set_text('↓— ↑— Σ—');
             return;
         }
 
@@ -238,12 +238,12 @@ export default class NetworkSpeedIndicator extends Extension {
             this._label.set_text(
                 `↓${Core.formatRateCompact(this._rxBps)} ` +
                 `↑${Core.formatRateCompact(this._txBps)} ` +
-                `⇅${Core.formatBytesCompact(total)}`);
+                `Σ${Core.formatBytesCompact(total)}`);
         } else {
             this._label.set_text(
                 `↓${Core.formatRate(this._rxBps)} ` +
                 `↑${Core.formatRate(this._txBps)} ` +
-                `⇅${Core.formatBytes(total)}`);
+                `Σ${Core.formatBytes(total)}`);
         }
 
         this._ifaceInfoItem.label.set_text(`Interface: ${iface}`);

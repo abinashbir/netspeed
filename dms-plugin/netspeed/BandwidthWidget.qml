@@ -113,7 +113,7 @@ PluginComponent {
             }
 
             StyledText {
-                text: "⇅ " + root.totalText
+                text: "Σ " + root.totalText
                 font.pixelSize: Theme.fontSizeSmall
                 color: Theme.widgetTextColor
                 anchors.horizontalCenter: parent.horizontalCenter
@@ -148,7 +148,7 @@ PluginComponent {
             }
 
             StyledText {
-                text: "⇅ " + root.totalText
+                text: "Σ " + root.totalText
                 font.pixelSize: Theme.fontSizeSmall
                 color: Theme.widgetTextColor
                 anchors.verticalCenter: parent.verticalCenter
